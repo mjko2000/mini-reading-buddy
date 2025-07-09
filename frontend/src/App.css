@@ -1,0 +1,175 @@
+/* Global Styles for Study Cake Reading Buddy - Retro Theme */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Comic Sans MS', 'Quicksand', sans-serif;
+  background: #FFF8E7; /* Cream background */
+  color: #2C3E50; /* Dark blue-gray text */
+  scroll-behavior: smooth;
+}
+
+#root {
+  height: 100%;
+}
+
+/* Custom scrollbar with retro styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF8E7;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF6B9D;
+  border-radius: 10px;
+  border: 2px solid #FFF8E7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5A8F;
+}
+
+/* Selection styling */
+::selection {
+  background: #A8E6CF;
+  color: #2C3E50;
+}
+
+::-moz-selection {
+  background: #A8E6CF;
+  color: #2C3E50;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid #FFD93D;
+  outline-offset: 2px;
+}
+
+/* Button disabled state */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+input,
+textarea {
+  transition: all 0.3s ease;
+}
+
+/* Loading animation for future use */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.loading {
+  animation: pulse 2s infinite;
+}
+
+/* Retro card hover effect */
+@keyframes retro-bounce {
+  0%, 20%, 60%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+}
+
+.retro-bounce:hover {
+  animation: retro-bounce 0.6s ease-in-out;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .chat-container {
+    padding: 0 1rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .text-area {
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+  
+  button {
+    display: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-color: #000080;
+    --secondary-color: #008000;
+    --background-color: #FFFFFF;
+    --text-color: #000000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark mode support (future enhancement) */
+@media (prefers-color-scheme: dark) {
+  /* Dark mode styles can be added here in the future */
+}
