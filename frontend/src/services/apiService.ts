@@ -38,7 +38,7 @@ interface ChatApiResponse {
  * API Service - Handles all backend API calls
  */
 export class ApiService {
-  private static readonly BASE_URL = process.env.VITE_API_URL;
+  private static readonly BASE_URL = import.meta.env.VITE_API_URL;
 
   /**
    * Generic fetch wrapper with error handling
