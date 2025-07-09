@@ -6,7 +6,6 @@ export class LangchainService {
   private llm: ChatOpenAI;
 
   constructor() {
-    console.log("api", process.env.OPENAI_API_KEY);
     // Initialize OpenAI model
     this.llm = new ChatOpenAI({
       openAIApiKey: process.env.OPENAI_API_KEY,
