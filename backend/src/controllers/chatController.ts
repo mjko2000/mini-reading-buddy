@@ -29,7 +29,7 @@ export class ChatController {
       if (!ChatService.validateMessage(message)) {
         const response: ChatApiResponse = {
           success: false,
-          error: "Message is invalid. Must be 1-500 characters long.",
+          error: "Message is invalid. Must be 1-2000 characters long.",
         };
         res.status(400).json(response);
         return;

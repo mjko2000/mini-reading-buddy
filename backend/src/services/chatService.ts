@@ -221,6 +221,6 @@ export class ChatService {
    */
   public static validateMessage(message: string): boolean {
     // Basic validation - could be enhanced with profanity filter, etc.
-    return message.trim().length > 0 && message.length <= 500;
+    return message.trim().length > 0 && message.length <= 2000;
   }
 }
